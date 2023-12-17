@@ -96,10 +96,10 @@ We have two pointers: slow (shifted by 1) and fast(shifted by 2) pointers.
 
 ### Complexity
 - Time complexity:
-O(lg N)
+O(n)
 
 - Space complexity:
-O(N)
+O(1)
 
 
 ### Code
@@ -128,7 +128,68 @@ Floyd's Tortoise and Hare algorithm [ Linked List Cycle].
 
 
 ### Approach
-We have two pointers: slow (shifted by 1) and fast(shifted by 2) pointers. 
+In the "isHappy" function, we have two pointers: slow (shifted by 1) and fast(shifted by 2) pointers. Therefore, before we the slow and the fast pointers meet, sumSquaredDigits is called twice on fast pointer and slow calls sumSquaredDigits once. Recursion continues till the fast pointer becomes equal to 1 and returns True, else, False is returned. 
+
+The sumSquaredDigits function calculates the sum of the squares of the digits of a number. 
+-It initializes output to 0, which will store the cumulative sum of the squared digits.
+-It uses a while loop to iterate through each digit of the number:
+-->(n % 10) extracts the last digit of n.
+-->(n % 10) ** 2 calculates the square of the digit.
+-->n = n // 10 removes the last digit from n.
+The squared digit is added to the output.
+The loop continues until n becomes 0, meaning all digits have been processed.
+The final output is the sum of the squares of the digits.
+
+### Complexity
+- Time complexity:
+O(lg N)
+
+- Space complexity:
+O(N)
+
+
+### Code
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        visit = set() #O(N)
+
+        while n not in visit:
+            visit.add(n)
+            n = self.sumOfSquares(n)
+
+        if n ==1:
+            return True
+        return False
+
+    def sumOfSquares(self, n: int): -> int
+        output = 0
+
+        while n:
+            digit = n % 10
+            digit = digit ** 2
+            output += digit
+            n = n//10
+
+        return output
+```
+## 6. Top K Frequent Elements
+### Intuition
+Floyd's Tortoise and Hare algorithm [ Linked List Cycle].
+
+
+### Approach
+In the "isHappy" function, we have two pointers: slow (shifted by 1) and fast(shifted by 2) pointers. Therefore, before we the slow and the fast pointers meet, sumSquaredDigits is called twice on fast pointer and slow calls sumSquaredDigits once. Recursion continues till the fast pointer becomes equal to 1 and returns True, else, False is returned. 
+
+The sumSquaredDigits function calculates the sum of the squares of the digits of a number. 
+-It initializes output to 0, which will store the cumulative sum of the squared digits.
+-It uses a while loop to iterate through each digit of the number:
+-->(n % 10) extracts the last digit of n.
+-->(n % 10) ** 2 calculates the square of the digit.
+-->n = n // 10 removes the last digit from n.
+The squared digit is added to the output.
+The loop continues until n becomes 0, meaning all digits have been processed.
+The final output is the sum of the squares of the digits.
 
 ### Complexity
 - Time complexity:
@@ -164,4 +225,62 @@ class Solution:
         return output
 ```
 
+## 6. Destination City
+### Intuition
+Each city points to another city. If a city doesn't point to any other city, then that is the destination city.
+
+
+### Approach
+Th
+
+### Complexity
+- Time complexity:
+O(lg N)
+
+- Space complexity:
+O(N)
+
+
+### Code
+```
+## 6. Top K Frequent Elements
+### Intuition
+Floyd's Tortoise and Hare algorithm [ Linked List Cycle].
+
+
+### Approach
+In the "isHappy" function, we have two pointers: slow (shifted by 1) and fast(shifted by 2) pointers. Therefore, before we the slow and the fast pointers meet, sumSquaredDigits is called twice on fast pointer and slow calls sumSquaredDigits once. Recursion continues till the fast pointer becomes equal to 1 and returns True, else, False is returned. 
+
+The sumSquaredDigits function calculates the sum of the squares of the digits of a number. 
+-It initializes output to 0, which will store the cumulative sum of the squared digits.
+-It uses a while loop to iterate through each digit of the number:
+-->(n % 10) extracts the last digit of n.
+-->(n % 10) ** 2 calculates the square of the digit.
+-->n = n // 10 removes the last digit from n.
+The squared digit is added to the output.
+The loop continues until n becomes 0, meaning all digits have been processed.
+The final output is the sum of the squares of the digits.
+
+### Complexity
+- Time complexity:
+O(lg N)
+
+- Space complexity:
+O(N)
+
+
+### Code
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        visit = set() #O(N)
+
+        while n not in visit:
+            visit.add(n)
+            n = self.sumOfSquares(n)
+
+        if n ==1:
+            return True
+        return False
+```
 
